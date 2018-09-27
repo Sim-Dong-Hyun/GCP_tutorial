@@ -6,3 +6,4 @@ https://cloud.google.com
 
 프로젝트 생성
 
+![대체 텍스트](/figure/1.png)
