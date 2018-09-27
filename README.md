@@ -8,12 +8,20 @@ https://cloud.google.com
 
 ![대체 텍스트](/figure/1.png)
 
+
+
+
 ***
+
+
+
 
 좌측 상단에 탐색 메뉴 클릭 후 **Compute Engine**을 클릭
 **VM인스턴스 생성**
 
 ![대체 텍스트](/figure/2.png)
+
+
 ![대체 텍스트](/figure/3.png)
 
 ID 및 API 엑세스는 사진에 표시된대로 해준다.
@@ -21,6 +29,11 @@ ID 및 API 엑세스는 사진에 표시된대로 해준다.
 나머지 옵션은 취향따라 알아서 선택한다.
 
 좌측 상단에 탐색 메뉴를 클릭하고, **ML엔진**에 들어가서 **모델**을 만들어준다.
+
+
+![대체 텍스트](/figure/10.png)
+
+
 
 **Storage**에 들어가서 **버킷**을 만든다.
 
@@ -32,7 +45,13 @@ ID 및 API 엑세스는 사진에 표시된대로 해준다.
 
 좀있다가 써야한다.
 
+
+
+
 ***
+
+
+
 
 https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute_component&_ga=2.109735046.-2023158229.1525695083
 
@@ -52,7 +71,12 @@ https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute
 > 그렇다 이 튜토리얼은 구글 클라우드 플랫폼에서 제공하는 문서를 옮긴 것이다. 정말 쓸모없는 짓이다.
 
 
+
+
 ***
+
+
+
 
 https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.104613379.-2023158229.1525695083
 
@@ -79,7 +103,12 @@ https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.104613
 따로 폴더를 만들어서 빼놓도록 하자!
 
 
+
+
 ***
+
+
+
 
 cmd를 열고 아래 명령어를 적어준다.
 
@@ -123,7 +152,12 @@ https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
 잘 안된다면 카톡으로 물어보세요.
 
 
+
+
 ***
+
+
+
 
 init 까지 다 되었다면 아래 단계를 진행하면 된다.
 
@@ -153,7 +187,11 @@ gcloud config set project [selected-project-id]
 ![대체 텍스트](/figure/8.png)
 
 
+
+
 ***
+
+
 
 
 위 과정까지 했다면 Google Cloud SDK Shell을 켠다.
@@ -165,6 +203,50 @@ gcloud config set project [selected-project-id]
 
 
 
+![대체 텍스트](/figure/9.png)
 
+
+위와 같이 나온다면 정상이다.
+
+**gcloud projects list** 라고 입력하면 계정의 모든 프로젝트를 볼 수 있다.
+
+
+다른 명령어는 **gcloud --help** 를 입력해서 볼 수 있다.
+
+
+
+
+***
+
+
+
+
+이제 폴더 하나를 만들어주자. 아까 JSON 파일을 저장한 폴더라도 상관없다.
+
+
+**__init__.py** 라는 파일을 만든다. 안에 아무것도 들어있지 않아도 상관없다.
+
+
+
+그 다음 간단한 코딩을 해준다.
+
+
+
+
+![대체 텍스트](/figure/11.png)
+
+
+
+
+***
+
+
+cmd를 열어준다.
+
+그리고 긴 명령어를 입력해야한다.
+
+
+
+필자는 간단한 계산을 해보았다.
 
 
