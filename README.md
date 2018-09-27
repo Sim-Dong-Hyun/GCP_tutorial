@@ -114,13 +114,13 @@ cmd를 열고 아래 명령어를 적어준다.
 
 PATH에는 방금 다운받은 JSON파일의 위치를 입력한다.
 
-set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
+**set GOOGLE_APPLICATION_CREDENTIALS=[PATH]**
 
 
 
 나의 경우엔 아래와 같다.
 
-set GOOGLE_APPLICATION_CREDENTIALS=[C:\Users\SDH\Desktop\MINESLAB\GCP_tensorflow_test\test-f0439c5d022a.json]
+**set GOOGLE_APPLICATION_CREDENTIALS=[C:\Users\SDH\Desktop\MINESLAB\GCP_tensorflow_test\test-f0439c5d022a.json]**
 
 
 여기까지 했으면 아래의 링크를 눌러 구글 클라우드 SDK를 다운받는다.
@@ -143,13 +143,13 @@ https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
 
 
 
-사실 이 튜토리얼은 필자가 급하게 하다가 뜬금없이 되어 버렸는데
-
-학과 동기가 튜토리얼을 요청해서 쓰는 것이다. 때문에 SDK를 새로 설치하지 않고
-
-기억에 의존해서 튜토리얼을 쓰는 중이다. 즉, 정확하지 않을 수도 있다.
-
-잘 안된다면 카톡으로 물어보세요.
+> 사실 이 튜토리얼은 필자가 급하게 하다가 뜬금없이 되어 버렸는데
+>
+> 학과 동기가 튜토리얼을 요청해서 쓰는 것이다. 때문에 SDK를 새로 설치하지 않고
+>
+> 기억에 의존해서 튜토리얼을 쓰는 중이다. 즉, 정확하지 않을 수도 있다.
+>
+> 잘 안된다면 카톡으로 물어보세요.
 
 
 
@@ -176,7 +176,7 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 콘솔이 켜지면 아래 명령어를 입력한다.
 
 
-gcloud config set project [selected-project-id]
+**gcloud config set project [selected-project-id]**
 
 
 브라켓 안에는 아까 복사한 프로젝트 ID를 붙여 넣는다.
