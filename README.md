@@ -230,7 +230,7 @@ gcloud config set project [selected-project-id]
 
 그 다음 간단한 코딩을 해준다.
 
-
+필자는 간단한 계산을 해보았다.
 
 
 ![대체 텍스트](/figure/11.png)
@@ -241,12 +241,17 @@ gcloud config set project [selected-project-id]
 ***
 
 
+
+
 cmd를 열어준다.
 
-그리고 긴 명령어를 입력해야한다.
+그리고 긴 명령어를 입력해준다.
+
+
+아래는 예시이다.
 
 
 
-필자는 간단한 계산을 해보았다.
+
 
 
