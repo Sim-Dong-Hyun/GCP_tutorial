@@ -237,6 +237,8 @@ gcloud config set project [selected-project-id]
 
 
 
+300$ 크레딧이 주어졌다고 하지만, 로컬에서 한번쯤 돌려보고 클라우드에 업로드 하는 것이 경제적인것 같다.
+
 
 ***
 
@@ -251,7 +253,49 @@ cmd를 열어준다.
 아래는 예시이다.
 
 
+![대체 텍스트](/figure/12.png)
+
+
+**gcloud ml-engine jobs submit training** [job의 이름] **--package-path=** [돌릴 소스의 상위 dir까지 입력] **--module-name=** [돌릴 소스의 상위 dir와 소스 이름 입력] **--staging-bucket=**[gs://아까 만든 버켓 이름]
+
+
+사진과 설명을 번갈아가면서 보면 이해될 것이다.
+
+위 명령어 덩어리를 입력한다면 사진과 같이 **state:QUEUED**라는 것을 보게 될 것이다.
+
+
+
+제대로 되었다면 구글 클라우드 플렛폼에 접속해서 ML엔진 메뉴에 접속하면 아래와 같은 모습이 보일 것이다.
 
 
 
 
+![대체 텍스트](/figure/13.png)
+
+
+
+작업의 진행 상황을 cmd창에서 보고 싶다면 아래의 명령어를 입력하면 된다.
+
+이번엔 명령어가 짧으니 한번 해보는 것도 좋을것 같다.
+
+
+![대체 텍스트](/figure/14.png)
+
+
+
+
+**gcloud ml-engine jobs stream-logs** [job의 이름]
+
+
+
+
+***
+
+
+
+
+
+![대체 텍스트](/figure/14.png)
+
+
+작업이 다 돌아갔다면 위와 같이 결과가 나올 것이다.
