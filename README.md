@@ -44,11 +44,11 @@ https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute
 
 
 > 안될시 https://cloud.google.com/ml-engine/docs/tensorflow/getting-started-training-prediction 에 접속 후
-
+>
 > 컨트룰 + F로 Enable the Cloud Machine Learning Engine and Compute Engine APIs. 를 찾고
-
+>
 > ENABLE THE APIS 버튼을 눌러준다. 
-
+>
 > 그렇다 이 튜토리얼은 구글 클라우드 플랫폼에서 제공하는 문서를 옮긴 것이다. 정말 쓸모없는 짓이다.
 
 
@@ -61,7 +61,7 @@ https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.104613
 서비스 계정은 **Compute Engine default service account**를 선택한다.
 
 > 마찬가지로 안될 시 Go to the Create service account key page in the GCP Console. 를 찾고
-
+>
 > Go to the Create service account key page 버튼을 눌러준다.
 
 ![대체 텍스트](/figure/5.png)
