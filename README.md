@@ -8,6 +8,13 @@ https://cloud.google.com
 
 ![대체 텍스트](/figure/1.png)
 
+***
+
 좌측 상단에 탐색 메뉴 클릭 후 Compute Engine을 클릭
 VM인스턴스 생성
+
 ![대체 텍스트](/figure/2.png)
+
+***
+
+https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute_component&_ga=2.109735046.-2023158229.1525695083
