@@ -143,7 +143,7 @@ https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
 
 
 
-> 사실 이 튜토리얼은 필자가 급하게 하다가 뜬금없이 되어 버렸는데
+> 사실 이 튜토리얼은 필자가 급하게 하다가 뜬금없이 쓰게 되어 버렸는데
 >
 > 학과 동기가 튜토리얼을 요청해서 쓰는 것이다. 때문에 SDK를 새로 설치하지 않고
 >
