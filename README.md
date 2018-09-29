@@ -1,4 +1,4 @@
-# GCP_tutorial
+# GCP_Install and Setting
 
 https://cloud.google.com
 
