@@ -296,6 +296,10 @@ cmd를 열어준다.
 **gcloud ml-engine jobs submit training** [job의 이름] **--package-path=** [돌릴 소스의 상위 dir까지 입력] **--module-name=** [돌릴 소스의 상위 dir와 소스 이름 입력] **--staging-bucket=**[gs://아까 만든 버켓 이름]
 
 
+
+이게 한 명령어다. 엄청길다.
+
+
 사진과 설명을 번갈아가면서 보면 이해될 것이다.
 
 위 명령어 덩어리를 입력한다면 사진과 같이 **state:QUEUED**라는 것을 보게 될 것이다.
