@@ -20,9 +20,13 @@ https://cloud.google.com
 
 
 
+위 사진처럼 각 종 서비스들을 고정해두면 두고두고 편하다.
+
+
 
 
 ![대체 텍스트](/figure/10.png)
+
 
 
 
@@ -30,7 +34,7 @@ https://cloud.google.com
 
 > 이름은 알아서, 기본 저장소 클래스는 Multi-Regional, 위치는 아시아로 해줍시다.
 
-위 사진처럼 각 종 서비스들을 고정해두면 두고두고 편하다.
+
 
 
 
@@ -47,7 +51,12 @@ https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute
 
 아래 사진과 같다
 
+
+
+
 ![대체 텍스트](/figure/4.png)
+
+
 
 
 > 안될시 https://cloud.google.com/ml-engine/docs/tensorflow/getting-started-training-prediction 에 접속 후
@@ -72,11 +81,20 @@ https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.104613
 
 서비스 계정은 **Compute Engine default service account**를 선택한다.
 
+
+
+
 > 마찬가지로 안될 시 Go to the Create service account key page in the GCP Console. 를 찾고
 >
 > Go to the Create service account key page 버튼을 눌러준다.
 
+
+
+
 ![대체 텍스트](/figure/5.png)
+
+
+
 
 위와 같은 모습이 보이면 잘된것이다.
 
@@ -85,7 +103,11 @@ https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.104613
 생성 버튼을 누르면 JSON 파일이 다운로드 될 것이다. 
 
 
+
+
 ![대체 텍스트](/figure/6.png)
+
+
 
 
 따로 폴더를 만들어서 빼놓도록 하자!
@@ -109,6 +131,8 @@ PATH에는 방금 다운받은 JSON파일의 위치를 입력한다.
 나의 경우엔 아래와 같다.
 
 **set GOOGLE_APPLICATION_CREDENTIALS=[C:\Users\SDH\Desktop\MINESLAB\GCP_tensorflow_test\test-f0439c5d022a.json]**
+
+
 
 
 여기까지 했으면 아래의 링크를 눌러 구글 클라우드 SDK를 다운받는다.
@@ -151,11 +175,23 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 
 구글 클라우드 플랫폼에 접속해서 자신의 프로젝트로 가보자.
 
+
+
+
 ![대체 텍스트](/figure/7.png)
+
+
+
+
 
 여기서 프로젝트 ID를 복사해준다.
 
+
+
+
 ![대체 텍스트](/figure/1-1.png)
+
+
 
 
 우측 상단 메뉴에 보면 Cloud Shell 활성화 버튼이 있다.
@@ -170,6 +206,8 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 브라켓 안에는 아까 복사한 프로젝트 ID를 붙여 넣는다.
 
 브라켓은 지워줍시다. 아래 사진처럼 에러가 뜰 수도 있습니다.
+
+
 
 
 ![대체 텍스트](/figure/8.png)
@@ -192,6 +230,8 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 
 
 ![대체 텍스트](/figure/9.png)
+
+
 
 
 위와 같이 나온다면 정상이다.
@@ -221,11 +261,16 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 필자는 간단한 계산을 해보았다.
 
 
+
+
 ![대체 텍스트](/figure/11.png)
 
 
 
+
 300$ 크레딧이 주어졌다고 하지만, 로컬에서 한번쯤 돌려보고 클라우드에 업로드 하는 것이 경제적인것 같다.
+
+
 
 
 ***
@@ -241,7 +286,11 @@ cmd를 열어준다.
 아래는 예시이다.
 
 
+
+
 ![대체 텍스트](/figure/12.png)
+
+
 
 
 **gcloud ml-engine jobs submit training** [job의 이름] **--package-path=** [돌릴 소스의 상위 dir까지 입력] **--module-name=** [돌릴 소스의 상위 dir와 소스 이름 입력] **--staging-bucket=**[gs://아까 만든 버켓 이름]
@@ -265,6 +314,8 @@ cmd를 열어준다.
 작업의 진행 상황을 cmd창에서 보고 싶다면 아래의 명령어를 입력하면 된다.
 
 이번엔 명령어가 짧으니 한번 해보는 것도 좋을것 같다.
+
+
 
 
 ![대체 텍스트](/figure/14.png)
