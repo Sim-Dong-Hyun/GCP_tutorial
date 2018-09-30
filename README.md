@@ -6,7 +6,7 @@ https://cloud.google.com
 
 프로젝트 생성
 
-![대체 텍스트](/figure/1.png)
+![대체 텍스트](/figure/1-1.png)
 
 
 ![대체 텍스트](/figure/2-1.PNG)
@@ -155,7 +155,7 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 
 여기서 프로젝트 ID를 복사해준다.
 
-![대체 텍스트](/figure/1.png)
+![대체 텍스트](/figure/1-1.png)
 
 
 우측 상단 메뉴에 보면 Cloud Shell 활성화 버튼이 있다.
