@@ -9,7 +9,7 @@ https://cloud.google.com
 ![대체 텍스트](/figure/1.png)
 
 
-![대체 텍스트](/figure/2-1.png)
+![대체 텍스트](/figure/2-1.PNG)
 
 
 
