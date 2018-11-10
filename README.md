@@ -252,7 +252,13 @@ init 까지 다 되었다면 아래 단계를 진행하면 된다.
 이제 폴더 하나를 만들어주자. 아까 JSON 파일을 저장한 폴더라도 상관없다.
 
 
-**__init__.py** 라는 파일을 만든다. 안에 아무것도 들어있지 않아도 상관없다.
+**__init__.py** 라는 파일을 만든다. 언더바(under line) 두개를 앞 뒤로 붙여주어야 한다.
+> 깃허브 마크다운 문법상 언더바가 나오질 않는다. 방법이 있을텐데 필자가 어떻게 하는지 모른다.
+> 아래 사진 참고.
+
+안에 아무것도 들어있지 않아도 상관없다.
+
+
 
 
 
@@ -348,3 +354,127 @@ cmd를 열어준다.
 
 
 처음에 가입하고 받은 300$ 크레딧에 대한 만료일과 잔액도 확인이 가능하다.
+
+
+
+***USE GPU & Choose Runtime Version, Python Version
+
+
+이제 ml engine을 사용하는 대부분의 이유인 GPU 사용법에 대해 알아보자.
+
+
+ml engine은 GPU뿐만 아니라 CPU와 TPU 등 다양한 고성능 컴퓨팅 머신을 제공한다.
+
+
+TPU 사용법에 대해서는 후에 추가하도록 하고, 이번엔 GPU 사용법에 대해 알아보자.
+
+
+우선 아래는 ml engine에서 제공하는 사전 정의된 GPU 머신의 종류와 가격이다.
+
+
+가격 측정의 기준은 아시아 태평양이다.
+
+
+![대체 텍스트](/figure/gpu.png)
+
+
+**BASIC**과 **STANDARD_1, PREMIUM_1**의 경우 CPU 머신이다.
+
+
+그 아래 **BASIC_GPU**은 **NVIDIA Tesla K80**을 사용할 수 있는 머신이다.
+
+
+즉, 우리는 K80 GPU를 시간 당 약 1.36$에 이용할 수 있는 것이다.
+
+
+여러개의 K80 GPU 혹은 **NVIDIA Tesla P100**, **NVIDIA Tesla V100**을 사용할 수도 있지만,
+
+
+우선 하나의 K80부터 다루어보도록 하자.
+
+
+***
+
+
+이전에 사용했던 명령어를 기억해보자.
+
+
+**gcloud ml-engine ...**
+
+
+![대체 텍스트](/figure/12.png)
+
+
+이미 눈치 챈 사람도 있겠지만 **--** 뒤에 붙는 명령어는 옵션과 비슷한 것이다.
+
+
+여기서 우리는 컴퓨팅 머신을 옵션으로 넣어줄 수 있다.
+
+뒤에 **--scale-tier=basic_gpu**을 적으면 GPU 사용 세팅은 끝난 것이다.
+
+
+실행을 시키면 아래와 같은 명령어를 볼 수 있을 것이다.
+
+
+![대체 텍스트](/figure/gpu2.png)
+
+
+
+***
+
+이제 ml engine의 **runtime version**과 **Python version**을 선택해보자.
+
+
+https://cloud.google.com/ml-engine/docs/tensorflow/runtime-version-list
+
+
+위의 링크는 ml engine의 runtime version과 version에 따른 지원하는 패키지
+
+그리고 파이썬 버전을 알 수 있다.
+
+
+18년 11월 10일 기준 가장 최신 버전은 1.10버전이며,
+
+
+옵션을 설정하지 않으면 디폴트 값으로 1.0 버전으로 실행된다.
+
+
+파이썬 3.5의 경우 1.4버전 이상의 경우만 동작이 가능하다.
+
+
+또한 런타임 버전에 따라 실행 가능한 텐서플로우의 버전이 다르니
+
+
+자신이 필요한 버전을 선택하도록 하자.
+
+
+위의 컴퓨팅 머신 선택과 마찬가지로 **--** 를 붙혀서 런타임 버전을 설정해주고,
+
+
+파이썬 3 유저일 경우 필자와 같이 따로 설정을 적어주자.
+
+
+**gcloud ml-engine jobs submit test_bundle --package-path=./ --module-name=test.test --staging-bucket=gs://sdh-satellite --scale-tier=basic_gpu --python-version=3.5 --runtime-version=1.10**
+
+
+위와 같이 적어주면 우리는 이제 GPU를 사용하면서 파이썬 3.5버전과
+
+
+ml engine 1.10에서 지원하는 패키지를 사용할 수 있다.
+
+
+이미 위의 기본적인 튜토리얼을 실행시켜본 사람은 알 수 있겠지만
+
+
+**gcloud ml-engine jobs stream-logs job-name** 이외에 
+
+**gcloud ml-engine jobs describe job-name** 이라는 명령어를 볼 수 있다.
+
+
+**jobs describe** 명령어를 실행시키면 자신의 job에 대한 정보를 볼 수 있다.
+
+
+아래 사진을 참고하자.
+
+
+![대체 텍스트](/figure/jobs_des.png)
