@@ -477,4 +477,4 @@ ml engine 1.10에서 지원하는 패키지를 사용할 수 있다.
 아래 사진을 참고하자.
 
 
-![대체 텍스트](/figure/jobs_des.png)
+![대체 텍스트](/figure/jobs_descr.png)
