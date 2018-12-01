@@ -1,7 +1,7 @@
 # GCP_Install and Setting
 
 
-_Dear Zubair._
+~~ear Zubair.~~
 
 
 https://cloud.google.com
